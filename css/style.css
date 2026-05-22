@@ -1,0 +1,11 @@
+.div_iframe {
+    display:flex;
+    width: 100%;
+    max-width: 900px;
+}
+iframe {
+    width:100%;
+    border: none;
+    padding: 20px;
+    height: 800px;
+}
