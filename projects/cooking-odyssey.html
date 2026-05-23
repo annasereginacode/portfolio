@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking Odyssey | Anna Seregina</title>
+    <style>
+        pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Adds a scrollbar for long lines */
+}
+    </style>
 </head>
 <body>
     <nav>
@@ -15,30 +23,100 @@
     </nav>
     <h1>Cooking Odyssey</h1>
 
-    <h2>Project Overview</h2>
-    <p>...</p>
+<h2>Project Overview</h2>
 
-    <h2>Problem Statement and Objectives</h2>
-    <p>...</p>
+<p>
+    Cooking Odyssey is a retro-inspired recipe website built with Django.
+    The project combines recipe management functionality with a retro-futuristic
+    visual design focused on creating a positive and enjoyable user experience.
+    Users can browse recipes, view detailed recipe pages, and explore the site
+    through a clean card-based interface.
+</p>
 
-    <h2>Technical Implementation</h2>
-    <p>...</p>
+<h2>Problem Statement and Objectives</h2>
 
-    <h2>Challenges and Solutions</h2>
-    <p>...</p>
+<p>
+    The goal of the project was to create a recipe website that felt more
+    creative and visually engaging than many traditional cooking websites.
+    In addition to presenting recipes clearly, the project focused on
+    responsive page design, reusable Django templates, image optimization,
+    and preparing the website for real-world deployment.
+</p>
 
-    <h2>Results and Impact</h2>
-    <p>...</p>
+<h2>Technical Implementation</h2>
 
-    <h2>Code Highlight</h2>
-    <pre><code>
-    <!-- code snippet here -->
-    </code></pre>
+<p>
+    The project was built using Python and Django with template-based rendering.
+    The application uses reusable HTML templates, static asset management,
+    media uploads, and environment variable configuration for production
+    security. Recipe data is dynamically displayed using Django views and
+    template loops. The project also includes optimized image handling using
+    AVIF and WebP formats with fallback support for compatibility.
+</p>
 
-    <h2>Future Enhancements</h2>
-    <ul>
-        <li>...</li>
-        <li>...</li>
-    </ul>
+<p>
+    Additional implementation features include WhiteNoise static file serving,
+    production environment configuration, responsive recipe card layouts,
+    and email configuration for contact functionality.
+</p>
+
+<h2>Challenges and Solutions</h2>
+
+<p>
+    One of the main challenges was configuring the project for production
+    deployment while keeping static files, media uploads, and environment
+    variables properly organized. Another challenge involved optimizing recipe
+    images for performance while maintaining compatibility across browsers.
+    This was solved by implementing multiple image formats with fallback
+    support using the HTML picture element.
+</p>
+
+<h2>Results and Impact</h2>
+
+<p>
+    The completed project demonstrates both front-end and back-end web
+    development skills, including Django configuration, responsive design,
+    template rendering, media management, and deployment preparation.
+    The project also helped strengthen understanding of full-stack web
+    application structure and production-oriented development practices.
+</p>
+
+
+<h2>Code Highlight</h2>
+<pre>
+    <code>
+        &lt;picture&gt;
+            &lt;source srcset="{{ base }}.avif" type="image/avif"&gt;
+            &lt;source srcset="{{ base }}.webp" type="image/webp"&gt;
+
+            &lt;img
+                src="{{ r.hero_image.url }}"
+                alt="{{ r.title }}"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"&gt;
+        &lt;/picture&gt;
+    </code>
+</pre>
+<ul>
+    <li>Performance optimization through modern image formats</li>
+    <li>AVIF and WebP support with fallback compatibility</li>
+    <li>Improved accessibility using descriptive alt text</li>
+    <li>Lazy loading for better page performance</li>
+    <li>Responsive media handling for recipe images</li>
+</ul>
+
+
+
+<h2>Future Enhancements</h2>
+
+<ul>
+    <li>Add user authentication and account registration</li>
+    <li>Allow registered users to save favorite recipes into personal recipe collections</li>
+    <li>Allow users to view and manage their saved recipe collections</li>
+    <li>Allow users to submit and manage their own recipes</li>
+    <li>Add nutrition-based filtering so users can find recipes by goals like lower calories, higher protein, or specific diet preferences</li>
+</ul>
 </body>
 </html>
