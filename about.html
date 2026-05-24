@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>About | Anna Seregina</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <p>
-        Computer Science student at Lake Washington Institute of Technology with a background in Applied Mathematics and previous software development experience. Before returning to school, I worked on large software projects where I helped develop and improve web interfaces using JavaScript, HTML, CSS, and ASP technologies. That experience gave me an understanding of teamwork, long-term software projects, and practical problem solving.
-     </p>
-    <p>
-        Currently, I am continuing to build my skills through academic and personal projects focused on Java, Python, JavaScript, SQL, Git, and web development. I enjoy creating applications that combine logical thinking with user-focused design, and I especially like the process of solving problems, debugging code, and turning ideas into working software.
-    </p>
-    <p>
-        My main interests are full-stack web development and software engineering. I am interested in continuing to grow as a developer through hands-on experience and collaboration on real projects. In the future, I hope to contribute to software that is both technically strong and useful for people.
-    </p>
-    <p>
-        Outside of programming, I enjoy creative projects, exploring retro-inspired design ideas, and learning new technologies. I value reliability, curiosity, steady improvement, and clear communication. I believe good software development requires not only technical skills, but also patience, adaptability, and the ability to work well with others.
-    </p>
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main site-main--narrow">
+        <p>
+            Computer Science student at Lake Washington Institute of Technology with a background in Applied Mathematics and previous software development experience. Before returning to school, I worked on large software projects where I helped develop and improve web interfaces using JavaScript, HTML, CSS, and ASP technologies. That experience gave me an understanding of teamwork, long-term software projects, and practical problem solving.
+        </p>
+        <p>
+            Currently, I am continuing to build my skills through academic and personal projects focused on Java, Python, JavaScript, SQL, Git, and web development. I enjoy creating applications that combine logical thinking with user-focused design, and I especially like the process of solving problems, debugging code, and turning ideas into working software.
+        </p>
+        <p>
+            My main interests are full-stack web development and software engineering. I am interested in continuing to grow as a developer through hands-on experience and collaboration on real projects. In the future, I hope to contribute to software that is both technically strong and useful for people.
+        </p>
+        <p>
+            Outside of programming, I enjoy creative projects, exploring retro-inspired design ideas, and learning new technologies. I value reliability, curiosity, steady improvement, and clear communication. I believe good software development requires not only technical skills, but also patience, adaptability, and the ability to work well with others.
+        </p>
+    </main>
 </body>
 </html>

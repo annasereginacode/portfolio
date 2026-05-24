@@ -3,102 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>Projects | Anna Seregina</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h1>Projects</h1>
-    <p>
-        Here are a few projects that show my experience with web development, JavaScript, backend basics, and problem solving.
-    </p>
-    <p>
-        All projects below were designed and developed independently as
-        academic or personal portfolio projects.
-    </p>
-    <section class="project_card">
-        <h2>Cooking Odyssey</h2>
-        <a href="projects/cooking-odyssey.html">View Project Details</a>
-        <img src="images/cookingodyssey.png" alt="Cooking Odyssey website screenshot">
-        <p>
-            A retro-futuristic recipe website created with HTML and CSS.
-            The project focuses on clean page structure, visual design,
-            navigation, and presenting recipe content in a user-friendly way.
-        </p>
-        <p><strong>Technologies:</strong> HTML, CSS</p>
-        <p>
-            <strong>My role:</strong> Designed and built the website structure, page layout, navigation, and visual style.
-        </p>
-        <a href="https://github.com/AnaSeregina/cooking-odyssey" target="_blank">GitHub Repository</a>
-    </section>
-    <section class="project_card">
-        <h2>JavaScript Game of Life</h2>
-        <a href="projects/game-of-life.html">View Project Details</a>
-        <img src="images/gameoflife.png" alt="JavaScript Game of Life screenshot">
-    <p>
-        An interactive implementation of Conway's Game of Life built with
-        JavaScript. The project includes grid updates, user controls,
-        and visual simulation behavior.
-    </p>
-    <p><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
-    <p>
-        <strong>My role:</strong> Implemented the game logic, user interface,
-        and interactive controls.
-    </p>
-    <a href="https://github.com/AnaSeregina/game-of-life-js" target="_blank">GitHub Repository</a>
-    </section>
-    <section class="project_card">
-        <h2>Full-Stack Scheduling System</h2>
-        <a href="projects/scheduling-system.html">View Project Details</a>
-        <img src="images/schedulingsystem.png" alt="Full-Stack Scheduling System screenshot" width="600">
-        <p>
-            A scheduling application built with Node.js and Express that allows
-            users to view and update availability data. The project uses a JSON
-            file for data storage and demonstrates client-server communication.
-        </p>
-        <p><strong>Technologies:</strong> JavaScript, Node.js, Express, HTML, CSS, JSON</p>
-        <p>
-            <strong>My role:</strong> Built the server routes, client-side schedule
-            interface, role-based display logic, and save/update functionality.
-        </p>
-        <a href="https://github.com/annasereginacode/full-stack-schedule" target="_blank">GitHub Repository</a>
-    </section>
-    cooking-odyssey.html
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main id="main-content" class="site-main">
+        <header class="page-header">
+            <h1>Projects</h1>
+            <p>
+                Here are a few projects that show my experience with web development, JavaScript, backend basics, and problem solving.
+            </p>
+            <p>
+                All projects below were designed and developed independently as
+                academic or personal portfolio projects.
+            </p>
+        </header>
 
+        <section class="grid grid--projects" aria-label="Projects">
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img src="images/cookingodyssey.png" alt="Cooking Odyssey website screenshot" loading="lazy">
+                </div>
+                <div class="project-card__body">
+                    <h2 class="project-card__title">Cooking Odyssey</h2>
+                    <p class="project-card__desc">
+                        A retro-futuristic recipe website created with HTML and CSS.
+                        The project focuses on clean page structure, visual design,
+                        navigation, and presenting recipe content in a user-friendly way.
+                    </p>
+                    <p><strong>Technologies:</strong> HTML, CSS</p>
+                    <p>
+                        <strong>My role:</strong> Designed and built the website structure, page layout, navigation, and visual style.
+                    </p>
+                    <div class="project-card__footer">
+                        <a href="projects/cooking-odyssey.html" class="link-arrow">View Project Details</a>
+                        <a href="https://github.com/AnaSeregina/cooking-odyssey" target="_blank" rel="noopener" class="icon-link">GitHub Repository</a>
+                    </div>
+                </div>
+            </article>
 
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img src="images/gameoflife.png" alt="JavaScript Game of Life screenshot" loading="lazy">
+                </div>
+                <div class="project-card__body">
+                    <h2 class="project-card__title">JavaScript Game of Life</h2>
+                    <p class="project-card__desc">
+                        An interactive implementation of Conway's Game of Life built with
+                        JavaScript. The project includes grid updates, user controls,
+                        and visual simulation behavior.
+                    </p>
+                    <p><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+                    <p>
+                        <strong>My role:</strong> Implemented the game logic, user interface,
+                        and interactive controls.
+                    </p>
+                    <div class="project-card__footer">
+                        <a href="projects/game-of-life.html" class="link-arrow">View Project Details</a>
+                        <a href="https://github.com/AnaSeregina/game-of-life-js" target="_blank" rel="noopener" class="icon-link">GitHub Repository</a>
+                    </div>
+                </div>
+            </article>
 
-    cooking-odyssey.html
-    game-of-life.html
-    scheduling-system.html
-
-
-    <p>
-        Projects Section:
-
-Minimum 3 polished projects
-Project cards/previews with:
-Project title and brief description
-Technologies used
-Screenshots or demo videos
-Links to GitHub repos and live demos
-Your specific role and contributions
-Detailed Project Pages (for each project):
-
-Comprehensive project overview
-Problem statement and objectives
-Technical implementation details
-Challenges faced and solutions
-Results and impact
-Code snippets highlighting key functionality
-Future enhancement plans
-    </p>
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img src="images/schedulingsystem.png" alt="Full-Stack Scheduling System screenshot" loading="lazy">
+                </div>
+                <div class="project-card__body">
+                    <h2 class="project-card__title">Full-Stack Scheduling System</h2>
+                    <p class="project-card__desc">
+                        A scheduling application built with Node.js and Express that allows
+                        users to view and update availability data. The project uses a JSON
+                        file for data storage and demonstrates client-server communication.
+                    </p>
+                    <p><strong>Technologies:</strong> JavaScript, Node.js, Express, HTML, CSS, JSON</p>
+                    <p>
+                        <strong>My role:</strong> Built the server routes, client-side schedule
+                        interface, role-based display logic, and save/update functionality.
+                    </p>
+                    <div class="project-card__footer">
+                        <a href="projects/scheduling-system.html" class="link-arrow">View Project Details</a>
+                        <a href="https://github.com/annasereginacode/full-stack-schedule" target="_blank" rel="noopener" class="icon-link">GitHub Repository</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

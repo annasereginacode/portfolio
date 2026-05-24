@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>Anna Seregina | Portfolio</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Anna Seregina</h1>
-    <h2>Computer Science Student | Aspiring Full-Stack Developer</h2>
-    <p>
-        Computer Science student at Lake Washington Institute of Technology
-        with previous software development experience and a background in
-        Applied Mathematics.
-    </p>
-    <p>
-        I enjoy building practical applications, solving technical problems,
-        and continuing to grow my skills in Java, Python, JavaScript,
-        SQL, and web development.
-    </p>
+    <main id="main-content" class="site-main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <h1 id="hero-title" class="hero__title">Anna Seregina</h1>
+                <p class="hero__role">Computer Science Student | Aspiring Full-Stack Developer</p>
+                <p>
+                    Computer Science student at Lake Washington Institute of Technology
+                    with previous software development experience and a background in
+                    Applied Mathematics.
+                </p>
+                <p>
+                    I enjoy building practical applications, solving technical problems,
+                    and continuing to grow my skills in Java, Python, JavaScript,
+                    SQL, and web development.
+                </p>
 
-    <img src="images/profile.jpg" alt="Anna Seregina profile photo">
+                <div class="btn-row">
+                    <a href="projects.html" class="btn btn--primary">View Projects</a>
+                    <a href="contact.html" class="btn btn--secondary">Contact Me</a>
+                </div>
+            </div>
 
-    <div>
-        <a href="projects.html">View Projects</a>
-        <a href="contact.html">Contact Me</a>
-    </div>
-
-    <p>
-        Homepage/Landing Page:
-Professional headline and brief introduction
-High-quality professional photo
-Clear navigation to other sections
-Call-to-action (contact or view work)
-    </p>
+            <div class="hero__media">
+                <img class="hero__photo" src="images/photo.jpeg" alt="Anna Seregina profile photo" loading="eager">
+            </div>
+        </section>
+    </main>
 </body>
 </html>

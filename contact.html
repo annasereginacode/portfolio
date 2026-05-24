@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>Contact | Anna Seregina</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <p>
-        Feel free to contact me regarding internships, projects, or professional opportunities.
-    </p>
-    <ul>
-        <li>Email: anna_s_80@icloud.com</li>
-        <li>
-            LinkedIn: <a href="https://linkedin.com/in/anna-seregina/" target="_blank">linkedin.com/in/anna-seregina</a>
-        </li>
-        <li>
-            GitHub: <a href="https://github.com/AnaSeregina" target="_blank">github.com/AnaSeregina</a>
-        </li>
-        <li>Location: Seattle, WA</li>
-    </ul>
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main site-main--narrow">
+        <p>
+            Feel free to contact me regarding internships, projects, or professional opportunities.
+        </p>
+        <ul>
+            <li>Email: anna_s_80@icloud.com</li>
+            <li>
+                LinkedIn: <a href="https://linkedin.com/in/anna-seregina/" target="_blank" rel="noopener">linkedin.com/in/anna-seregina</a>
+            </li>
+            <li>
+                GitHub: <a href="https://github.com/AnaSeregina" target="_blank" rel="noopener">github.com/AnaSeregina</a>
+            </li>
+            <li>Location: Seattle, WA</li>
+        </ul>
+    </main>
 </body>
 </html>

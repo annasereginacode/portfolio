@@ -3,90 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
     <title>Full-Stack Scheduling System | Anna Seregina</title>
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../contact.html">Contact</a>
-    </nav>
-    <h1>Full-Stack Scheduling System</h1>
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Project Overview</h2>
-    <p>
-        The Full-Stack Scheduling System is a web application built with
-        Node.js, Express, HTML, CSS, and JavaScript. The application allows users
-        to load a weekly schedule, select available time slots, and save schedule
-        changes through client-server communication.
-    </p>
-    <h2>Problem Statement and Objectives</h2>
-    <p>
-        The goal of this project was to build a simple scheduling system that
-        demonstrates both front-end and back-end development. The project needed
-        to display a weekly schedule, allow users to interact with available and
-        booked time slots, and send updated schedule data to the server.
-    </p>
-    <h2>Technical Implementation</h2>
-    <p>
-        The front end uses JavaScript to dynamically build the schedule table,
-        create buttons for each time slot, and update the interface based on the
-        current user. The back end uses Express routes to serve static files,
-        receive schedule updates, return schedule data as JSON, and handle basic
-        email-based role detection.
-    </p>
-    <p>
-        The schedule is stored as an array of objects, where each row represents
-        a time slot and each weekday stores the current availability value. The
-        client uses fetch requests to communicate with the server and update the
-        displayed schedule after data is saved.
-    </p>
-    <h2>Challenges and Solutions</h2>
-    <p>
-        One challenge was keeping the client-side schedule and saved server data
-        in sync. I solved this by storing both the current schedule and the last
-        saved schedule, then comparing them to detect unsaved changes. Another
-        challenge was displaying different button behavior for instructors and
-        students. I solved this by using email-based role detection and separate
-        logic for available, booked, disabled, and student-booked schedule cells.
-    </p>
-    <h2>Results and Impact</h2>
-    <p>
-        This project helped me practice full-stack development with JavaScript,
-        including DOM manipulation, event handling, JSON data, fetch requests,
-        Express routes, and basic server-side logic. It also gave me experience
-        designing an interactive interface that changes based on user role and
-        saved application state.
-    </p>
-    <h2>Code Highlight</h2>
-    <pre><code>
-    app.post('/schedule-data', (req, res) =&gt; {
-        const {client_schedule} = req.body;
-        schedule = client_schedule;
-        console.log("Schedule is saved!");
-        res.json({
-            schedule: schedule,
-            times: times,
-            days: days
-        });
+    <main id="main-content" class="site-main site-main--narrow">
+        <h1>Full-Stack Scheduling System</h1>
+
+        <h2>Project Overview</h2>
+        <p>
+            The Full-Stack Scheduling System is a web application built with
+            Node.js, Express, HTML, CSS, and JavaScript. The application allows users
+            to load a weekly schedule, select available time slots, and save schedule
+            changes through client-server communication.
+        </p>
+        <h2>Problem Statement and Objectives</h2>
+        <p>
+            The goal of this project was to build a simple scheduling system that
+            demonstrates both front-end and back-end development. The project needed
+            to display a weekly schedule, allow users to interact with available and
+            booked time slots, and send updated schedule data to the server.
+        </p>
+        <h2>Technical Implementation</h2>
+        <p>
+            The front end uses JavaScript to dynamically build the schedule table,
+            create buttons for each time slot, and update the interface based on the
+            current user. The back end uses Express routes to serve static files,
+            receive schedule updates, return schedule data as JSON, and handle basic
+            email-based role detection.
+        </p>
+        <p>
+            The schedule is stored as an array of objects, where each row represents
+            a time slot and each weekday stores the current availability value. The
+            client uses fetch requests to communicate with the server and update the
+            displayed schedule after data is saved.
+        </p>
+        <h2>Challenges and Solutions</h2>
+        <p>
+            One challenge was keeping the client-side schedule and saved server data
+            in sync. I solved this by storing both the current schedule and the last
+            saved schedule, then comparing them to detect unsaved changes. Another
+            challenge was displaying different button behavior for instructors and
+            students. I solved this by using email-based role detection and separate
+            logic for available, booked, disabled, and student-booked schedule cells.
+        </p>
+        <h2>Results and Impact</h2>
+        <p>
+            This project helped me practice full-stack development with JavaScript,
+            including DOM manipulation, event handling, JSON data, fetch requests,
+            Express routes, and basic server-side logic. It also gave me experience
+            designing an interactive interface that changes based on user role and
+            saved application state.
+        </p>
+        <h2>Code Highlight</h2>
+<pre><code>app.post('/schedule-data', (req, res) =&gt; {
+    const {client_schedule} = req.body;
+    schedule = client_schedule;
+    console.log("Schedule is saved!");
+    res.json({
+        schedule: schedule,
+        times: times,
+        days: days
     });
-    </code></pre>
-    <p>
-        This route receives the updated schedule from the browser, saves it on
-        the server, and sends the updated schedule data back to the client as JSON.
-        It shows the basic full-stack flow between the front end and the Express
-        back end.
-    </p>
-    <h2>Future Enhancements</h2>
-    <ul>
-        <li>Store schedule data in a database instead of server memory</li>
-        <li>Add real user authentication instead of email-based role detection</li>
-        <li>Add multi-user support so several people can use and update the schedule</li>
-        <li>Add real-time updates so users can see schedule changes without refreshing the page</li>
-        <li>Add conflict handling to prevent two users from booking the same time slot at the same time</li>
-        <li>Improve the user interface for mobile and smaller screens</li>
-    </ul>
+});
+</code></pre>
+        <p>
+            This route receives the updated schedule from the browser, saves it on
+            the server, and sends the updated schedule data back to the client as JSON.
+            It shows the basic full-stack flow between the front end and the Express
+            back end.
+        </p>
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li>Store schedule data in a database instead of server memory</li>
+            <li>Add real user authentication instead of email-based role detection</li>
+            <li>Add multi-user support so several people can use and update the schedule</li>
+            <li>Add real-time updates so users can see schedule changes without refreshing the page</li>
+            <li>Add conflict handling to prevent two users from booking the same time slot at the same time</li>
+            <li>Improve the user interface for mobile and smaller screens</li>
+        </ul>
+    </main>
 </body>
 </html>

@@ -3,90 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Ctext x='50%25' y='58%25' font-family='ui-monospace,monospace' font-size='18' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
     <title>JavaScript Game of Life | Anna Seregina</title>
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../contact.html">Contact</a>
-    </nav>
-    <h1>JavaScript Game of Life</h1>
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav-list">Menu</button>
+            <nav aria-label="Primary">
+                <ul id="primary-nav-list" class="site-nav__links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Project Overview</h2>
-    <p>
-        JavaScript Game of Life is a console-based implementation of Conway's
-        Game of Life written in plain JavaScript. The project simulates generations
-        of cells in a two-dimensional grid, where each cell is either alive or dead.
-        The simulation runs automatically in the terminal and uses Unicode symbols
-        and ANSI colors to make the output easier to read.
-    </p>
-    <h2>Problem Statement and Objectives</h2>
-    <p>
-        The goal of this project was to practice JavaScript logic, arrays, loops,
-        functions, and simulation behavior by building a working version of
-        Conway's Game of Life. The main objective was to apply the standard Game
-        of Life rules, generate random starting patterns, count neighboring cells,
-        and display each new generation clearly in the console.
-    </p>
-    <h2>Technical Implementation</h2>
-    <p>
-        The project uses a two-dimensional array to represent the grid. Each cell
-        is stored as either 0 for dead or 1 for alive. A random starting grid is
-        generated, and then the program repeatedly creates new generations using
-        Conway's rules. The code separates responsibilities into helper functions
-        for grid creation, random cell generation, neighbor counting, rule
-        calculation, and console rendering.
-    </p>
-    <p>
-        The simulation uses setInterval to update the grid every second. ANSI
-        escape codes are used to color the terminal output, with yellow squares
-        representing live cells and blue dots representing dead cells.
-    </p>
-    <h2>Challenges and Solutions</h2>
-    <p>
-        One challenge was correctly counting the eight neighboring cells around
-        each position without causing errors at the edges of the grid. I solved
-        this by checking whether neighboring rows and columns exist before adding
-        their values. Another challenge was making sure each generation was based
-        on the previous grid instead of changing cells too early. To solve this,
-        the program creates a new empty grid for each generation and stores the
-        updated cell values there.
-    </p>
-    <h2>Results and Impact</h2>
-    <p>
-        The completed project demonstrates core JavaScript programming skills,
-        including working with arrays, nested loops, conditional logic, helper
-        functions, and timed execution. It also helped me better understand how
-        small rules can create complex behavior over time in a simulation.
-    </p>
-    <h2>Code Highlight</h2>
-    <pre><code>
-    function makeNewGeneration(grid) {
-        let result = makeEmptyGrid(grid.length, grid[0].length);
-        for (let i = 0; i &lt; grid.length; i++) {
-            for (let j = 0; j &lt; grid[i].length; j++) {
-                const neighboursCount = getNeighboursCount(grid, i, j);
-                result[i][j] = getNewCellValue(grid[i][j], neighboursCount);
-            }
+    <main id="main-content" class="site-main site-main--narrow">
+        <h1>JavaScript Game of Life</h1>
+
+        <h2>Project Overview</h2>
+        <p>
+            JavaScript Game of Life is a console-based implementation of Conway's
+            Game of Life written in plain JavaScript. The project simulates generations
+            of cells in a two-dimensional grid, where each cell is either alive or dead.
+            The simulation runs automatically in the terminal and uses Unicode symbols
+            and ANSI colors to make the output easier to read.
+        </p>
+        <h2>Problem Statement and Objectives</h2>
+        <p>
+            The goal of this project was to practice JavaScript logic, arrays, loops,
+            functions, and simulation behavior by building a working version of
+            Conway's Game of Life. The main objective was to apply the standard Game
+            of Life rules, generate random starting patterns, count neighboring cells,
+            and display each new generation clearly in the console.
+        </p>
+        <h2>Technical Implementation</h2>
+        <p>
+            The project uses a two-dimensional array to represent the grid. Each cell
+            is stored as either 0 for dead or 1 for alive. A random starting grid is
+            generated, and then the program repeatedly creates new generations using
+            Conway's rules. The code separates responsibilities into helper functions
+            for grid creation, random cell generation, neighbor counting, rule
+            calculation, and console rendering.
+        </p>
+        <p>
+            The simulation uses setInterval to update the grid every second. ANSI
+            escape codes are used to color the terminal output, with yellow squares
+            representing live cells and blue dots representing dead cells.
+        </p>
+        <h2>Challenges and Solutions</h2>
+        <p>
+            One challenge was correctly counting the eight neighboring cells around
+            each position without causing errors at the edges of the grid. I solved
+            this by checking whether neighboring rows and columns exist before adding
+            their values. Another challenge was making sure each generation was based
+            on the previous grid instead of changing cells too early. To solve this,
+            the program creates a new empty grid for each generation and stores the
+            updated cell values there.
+        </p>
+        <h2>Results and Impact</h2>
+        <p>
+            The completed project demonstrates core JavaScript programming skills,
+            including working with arrays, nested loops, conditional logic, helper
+            functions, and timed execution. It also helped me better understand how
+            small rules can create complex behavior over time in a simulation.
+        </p>
+        <h2>Code Highlight</h2>
+<pre><code>function makeNewGeneration(grid) {
+    let result = makeEmptyGrid(grid.length, grid[0].length);
+    for (let i = 0; i &lt; grid.length; i++) {
+        for (let j = 0; j &lt; grid[i].length; j++) {
+            const neighboursCount = getNeighboursCount(grid, i, j);
+            result[i][j] = getNewCellValue(grid[i][j], neighboursCount);
         }
-        return result;
     }
-    </code></pre>
-    <p>
-        This function creates the next generation without modifying the original
-        grid while it is still being checked. This is important because every cell
-        must be updated based on the same previous generation.
-    </p>
-    <h2>Future Enhancements</h2>
-    <ul>
-        <li>Add preset patterns such as gliders, blinkers, and pulsars</li>
-        <li>Add keyboard controls for starting, stopping, and changing speed</li>
-        <li>Add optional wraparound edges for toroidal grid behavior</li>
-        <li>Create a browser-based version using HTML, CSS, and JavaScript</li>
-        <li>Add a visual canvas-based interface for better interaction</li>
-    </ul>
+    return result;
+}
+</code></pre>
+        <p>
+            This function creates the next generation without modifying the original
+            grid while it is still being checked. This is important because every cell
+            must be updated based on the same previous generation.
+        </p>
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li>Add preset patterns such as gliders, blinkers, and pulsars</li>
+            <li>Add keyboard controls for starting, stopping, and changing speed</li>
+            <li>Add optional wraparound edges for toroidal grid behavior</li>
+            <li>Create a browser-based version using HTML, CSS, and JavaScript</li>
+            <li>Add a visual canvas-based interface for better interaction</li>
+        </ul>
+    </main>
 </body>
 </html>
