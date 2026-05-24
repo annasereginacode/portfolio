@@ -1,3 +1,32 @@
+body {
+    font-family:'Inter', sans-serif;
+    /* Inter
+    Poppins
+    Roboto */
+}
+section {
+    margin: 40px 0;
+}
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+img {
+    width: 200px;
+    height: 100%;
+}
+.project_card {
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
 .div_iframe {
     display:flex;
     width: 100%;
