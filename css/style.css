@@ -723,6 +723,18 @@ section:first-of-type {
     color: var(--accent);
 }
 
+.project-card__links {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.project-links {
+    margin: 0 0 28px;
+}
+
 /* ----------------------------------------------------------
    Page Header (sub-pages)
    ---------------------------------------------------------- */
